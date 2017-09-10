@@ -8,7 +8,11 @@
 </head>
 <body>
     <h1>User:</h1>
-    <h3>{{name}}</h3>
-    <h3>{{email}}</h3>
+    <!-- <h3>{{name}}</h3>
+    <h3>{{email}}</h3> -->
+    <!-- # we can write it in render_template or we can also write session in html. check user.html
+    # I am concern that what a session. A project? A dictionary? A list? How does it store data? For now we are creating a page for user to read to know their own information, but session is also for creator to check their customer's record. If we use Python OOP to create a class and use it under session, is it a good way to store for creator? -->
+    <h3>{{session['name']}}</h3>
+    <h3>{{session['email']}}</h3>
 </body>
 </html>
