@@ -10,16 +10,30 @@
     <h1>Index Page</h1>
     <h3>Create a User</h3>
     <form action='/users' method='post'>
+        <input type='hidden' name='action' value='create user'>
         Name: <input type='text' name='name'>
         Email: <input type='text' name='email'>
+        Passward:<input type='password' name='password'>
         <input type='submit' value='create user'>
+    </form>
+    <form action='/users' method='post'>
+        <input type='hidden' name='action' value='login'>
+        Name: <input type='text' name='name'>
+        Email: <input type='text' name='email'>
+        Passward:<input type='password' name='password'>
+        <input type='submit' value='login'>
     </form>
     <p>{{phrase}}</p>
     <p>Times:{{times}}</p>
     {%for x in range(0,times): %}
     <p>{{phrase}}</p>
     {%endfor%}
-    
+    {%if phrase=="hello"%}
+    <p>what's up</p>
+    <!-- {%end if%}
+    {%else%}
+    {%end else%} 
+    doesn't work. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'. I tried add {%else%}{%end else%}still doesn't work.Interesting!!!//will not cover the codes here  -->
     
 
 </body>
